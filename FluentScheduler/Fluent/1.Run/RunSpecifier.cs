@@ -49,7 +49,7 @@ namespace FluentScheduler
         /// <param name="time">Time to run the job</param>
         public void Every(TimeSpan time)
         {
-            var timeOfDay = new TimeSpan(time.Hours, time.Minutes, time.Seconds);
+            var timeOfDay = new TimeSpan(time.Days, time.Hours, time.Minutes, time.Seconds, time.Milliseconds);
 
              if (timeOfDay < TimeSpan.Zero)
                 throw new ArgumentOutOfRangeException($"\"{nameof(time)}\" should be positive.");
