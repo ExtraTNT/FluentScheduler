@@ -15,7 +15,7 @@
 
 # FluentScheduler
 
-**Important note**: This branch refers to the upcoming version of the library, that's still unstable. For the current version please head to the [master branch].
+This is a fork from the currently not really maintained FluentScheduler
 
 Automated job scheduler with fluent interface for the .NET platform.
 
@@ -27,17 +27,7 @@ var schedule = new Schedule(
 
 schedule.Start();
 ```
+## Changes to the original one:
+ - Fix doubble execution
+ - Implement ms timing (only useful around 50ms, below that it can sometimes bug around and should not be used for tasks, where the time must be accurate)
 
-**Learning?**
-Check the [documentation]!
-
-**Comments? Problems? Suggestions?**
-Check the [issues]!
-
-**Want to help?**
-Check the [help wanted] label!
-
-[master branch]: https://github.com/fluentscheduler/FluentScheduler
-[documentation]: http://fluentscheduler.github.io/v6
-[issues]:        https://github.com/fluentscheduler/FluentScheduler/issues
-[help wanted]:   https://github.com/fluentscheduler/FluentScheduler/labels/help%20wanted
